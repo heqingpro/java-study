@@ -9,7 +9,9 @@
         <module name="demo" />
         <module name="dubbo-api" />
         <module name="dubbo-zookeeper-consumer" />
-        <module name="study" />
+        <module name="redis-cluster-demo" />
+        <module name="websocket-client" />
+        <module name="websocket-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,7 +19,10 @@
       <module name="dubbo-api" target="1.8" />
       <module name="dubbo-zookeeper-consumer" target="1.8" />
       <module name="dubbo-zookeeper-demo" target="1.8" />
+      <module name="redis-cluster-demo" target="1.8" />
       <module name="study" target="1.5" />
+      <module name="websocket-client" target="1.5" />
+      <module name="websocket-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
