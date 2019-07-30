@@ -73,6 +73,11 @@ public class NIOClient {
 
                     //在这里可以给服务端发送信息哦
                     channel.write(ByteBuffer.wrap(new String("post message to server").getBytes()));
+                    try {
+                        Thread.sleep(1000);
+                    }catch (Exception e){
+
+                    }
                     //在和服务端连接成功之后，为了可以接收到服务端的信息，需要给通道设置读的权限。
                     channel.register(this.selector, SelectionKey.OP_READ);
 
@@ -96,7 +101,7 @@ public class NIOClient {
         //和服务端的read方法一样
         SocketChannel channel = (SocketChannel) key.channel();
         // 创建读取的缓冲区
-        ByteBuffer buffer = ByteBuffer.allocate(10);
+        ByteBuffer buffer = ByteBuffer.allocate(50);
         channel.read(buffer);
         byte[] data = buffer.array();
         String msg = new String(data).trim();
