@@ -1,20 +1,31 @@
 package study.designpatterns.ChainOfResponsibility;
 
-import lombok.Data;
-
 /**
  * @author heqingqing
  * @Description: $
  * @date 2019/7/30 17:37
  */
-@Data
 public class Request {
 
-    private RequestType type;
+    private RequestType requestType;
     private String name;
 
-    public Request(RequestType type, String name) {
-        this.type = type;
+    public void setRequestType(RequestType requestType){
+        this.requestType = requestType;
+    }
+
+    public RequestType getRequestType() {
+        return requestType;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public Request(RequestType requestType, String name) {
+        this.requestType = requestType;
         this.name = name;
     }
 }

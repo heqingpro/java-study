@@ -25,7 +25,7 @@ public class Chain {
 
         @Override
         public void handlerRequest(Request request) {
-            if (request.getType() == RequestType.TYPE1) {
+            if (request.getRequestType() == RequestType.TYPE1) {
                 System.out.println(request.getName() + " is handle by ConcreteHandler1");
                 return;
             }
@@ -42,7 +42,7 @@ public class Chain {
 
         @Override
         public void handlerRequest(Request request) {
-            if (request.getType() == RequestType.TYPE2) {
+            if (request.getRequestType() == RequestType.TYPE2) {
                 System.out.println(request.getName() + " is handle by ConcreteHandler2");
                 return;
             }
